@@ -1,0 +1,1 @@
+# This is the item catalog project for the fullstack nanodegree
