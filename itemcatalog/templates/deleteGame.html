@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% include "messages.html" %}
+
+<div class="row">
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6">
+
+    <h1>{{game.title}}</h1>
+
+    <p>Are you sure you want to delete the game?</p>
+
+    <form action="{{ url_for('delete_game', genre_name=genre_name, game_title=game.title) }}"
+          method='POST'>
+
+        <a href="{{ url_for('game_info', genre_name=genre_name, game_title=game.title) }}">Cancel</a>
+        <input type='submit' value='Delete'>
+
+    </form>
+
+
+    </div>
+
+    <div class="col-md-3"></div>
+
+</div>
+    {% endblock %}

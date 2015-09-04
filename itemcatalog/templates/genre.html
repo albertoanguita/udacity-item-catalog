@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% include "messages.html" %}
+
+<div class="row">
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-3">
+
+        {% for genre in genres %}
+
+        <h2><a href="{{ url_for('genre_games', genre_name=genre.name) }}">{{genre.name}}</a>
+        </h2>
+
+        {% endfor %}
+
+    </div>
+    <div class="col-md-5">
+
+        <h1>{{genre_name}} games</h1>
+
+        {% for game in game_list %}
+
+        <p>
+            <a href="{{ url_for('game_info', genre_name=get_genre_name(game.genre_id), game_title=game.title) }}">{{game.title}}</a>
+        </p>
+
+        {% endfor %}
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+* {
+    font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    color: #51453B;
+    line-height: 60px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 300;
+    padding-top: 15px;
+    margin-top: 0;
+}
+
+h2 a {
+    font-size: 22px;
+    font-weight: 300;
+    padding-top: 15px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 18px;
+    color: #4A4A4A;
+    line-height: 23px;
+}
+
+p {
+    font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #7B7573;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+strong {
+    font-size: 16px;
+    color: #7B7573;
+    line-height: 24px;
+}
+
+a {
+    font-size: 14px;
+    color: #0093B9;
+    line-height: 17px;
+}
+
+.btn {
+    padding: 20px;
+    margin: 0;
+    border-color: #9FB80A;
+    border-width: 2px;
+    color: #9FB80A;;
+}
+
+.btn:hover {
+    border-color: #9FB80A;
+}
+
+.btn.delete {
+    border-color: #aaaaaa;
+    color: #aaaaaa;
+}
+
+.btn.delete:hover {
+    border-color: #aaaaaa;
+    color: red;
+}
+
+.top-menu {
+    margin-bottom: 30px;
+    background-color: #e8e8e8;
+    padding: 30px 50px;
+}
+
+.top-menu p {
+    margin-bottom: 0;
+    line-height: 16px;
+}
+
+.top-menu a {
+    margin-bottom: 0;
+    line-height: 16px;
+    font-size: 36px;
+    color: #1d4d7b;
+    font-weight: 500;
+}
+
+.flash {
+    background-color: #98FB98;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+.flash li {
+    list-style-type: none;
+    text-align: center;
+
+}
+
+input, textarea, select, option {
+    font-weight: 300;
+}
+
+.add-game {
+    color: crimson;
+}
+
+.add-game:hover {
+    color: #9f0e2a;
+}
+
+#signInButton, #loginResult {
+    text-align: center;
+    padding-top: 30px;
+}
+
+form {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}

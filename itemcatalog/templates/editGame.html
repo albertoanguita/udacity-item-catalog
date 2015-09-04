@@ -1,0 +1,65 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% include "messages.html" %}
+
+<div class="row">
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6">
+
+        <h1>{{game.title}}</h1>
+
+        <p>Edit game</p>
+
+        <form action="{{ url_for('edit_game', genre_name=genre_name, game_title=game.title) }}"
+              method='POST'>
+
+            <span>Title</span><br>
+            <input type='text' size='30' name='title'
+                   placeholder="Enter the game title"
+                   value="{{game.title}}"><br>
+
+            <span>Description</span><br>
+            <textarea rows="3" cols="58" name="description"
+                      placeholder="Enter the game description">{{game.description}}</textarea>
+            <br>
+
+            <span>Release date</span><br>
+            <input type='text' size='30' name='releaseDate'
+                   placeholder="YYYY-MM-DD" value="{{game.releaseDate}}"><br>
+
+            <span>Image URL (optional)</span><br>
+            <input type='text' size='60' name='pictureURL'
+                   placeholder="Enter the game image URL"
+                   value="{{game.pictureURL}}"><br>
+
+
+            <span>Genre</span><br>
+            <label>
+                <select name="genre">
+                    {% for genre in genres %}
+                    {% if get_genre_name(game.genre_id) == genre.name %}
+                    <option value="{{genre.name}}" selected="selected">
+                        {{genre.name}}
+                    </option>
+                    {% else %}
+                    <option value="{{genre.name}}">{{genre.name}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </label>
+
+            <br>
+            <input type='submit' value='Submit'>
+
+        </form>
+
+        <a href="{{ url_for('game_info', genre_name=genre_name, game_title=game.title) }}">Cancel</a>
+
+    </div>
+
+    <div class="col-md-3"></div>
+
+</div>
+{% endblock %}
